@@ -115,7 +115,7 @@
       }
     },
     {
-      "type": "text",
+      "type": "select",
       "readonly": false,
       "title": {
         "$ref": "#/messages/deploy.groupName"
