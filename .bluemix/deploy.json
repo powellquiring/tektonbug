@@ -70,7 +70,11 @@
         "$ref": "#/messages/deploy.clusterDescription"
       },
       "type": "string",
-      "pattern": "\\S"
+      "pattern": "\\S",
+      "validator": {
+          "v-type": "k8s-cluster-name",
+          "params": ["target-resource-group", "target-region"]
+      }
     },
     "target-cluster-namespace": {
       "description": {
@@ -80,7 +84,7 @@
       "pattern": "\\S",
       "validator": {
           "v-type": "k8s-cluster-name",
-          "params": ["target-resource-group", "prod-region"]
+          "params": ["target-resource-group", "target-region"]
       }
     }
   },
