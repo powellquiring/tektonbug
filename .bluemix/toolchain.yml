@@ -27,9 +27,11 @@ services:
         - repo
       name: 'secure-file-storage ({{form.pipeline.parameters.branch-name}})'
       ui-pipeline: true
+      # type: tekton
       configuration:
         content:
           $text: pipeline.yml
+          # $text: tekton.yaml
         env:
           GIT_REPO: repo
           GIT_BRANCH: '{{form.pipeline.parameters.branch-name}}'
