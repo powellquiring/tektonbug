@@ -1,13 +1,3 @@
-#inputs:
-#- branch: master
-#  path: .tekton
-#  type: git
-#  service: ${GIT_REPO}
-#properties: []
-#triggers: []
-#---
-#properties: []
-#triggers: []
 inputs:
 - type: git
   service: repo
@@ -76,6 +66,7 @@ triggers:
 - eventListener: UNINSTALL
   name: UNINSTALL
   type: manual
+# git triggers break the pipeline making it uneditable
 #- branch: master
 #  eventListener: BUILD
 #  events:
