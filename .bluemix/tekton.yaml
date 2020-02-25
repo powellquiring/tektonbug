@@ -76,10 +76,10 @@ triggers:
 - eventListener: UNINSTALL
   name: UNINSTALL
   type: manual
-- branch: master
-  eventListener: BUILD
-  events:
-    push: true
-  name: git-BUILD
-  type: git
-  url: https://github.com/powellquiring/secure-file-storage.git
+#- branch: master
+#  eventListener: BUILD
+#  events:
+#    push: true
+#  name: git-BUILD
+#  type: git
+#  url: https://github.com/powellquiring/secure-file-storage.git
