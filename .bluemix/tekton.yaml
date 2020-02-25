@@ -9,10 +9,10 @@
 #properties: []
 triggers: []
 inputs:
-- type: git
-  service: repo
-  branch: ${GIT_BRANCH}
-  path: .tekton
+#- type: git
+#  service: repo
+#  branch: ${GIT_BRANCH}
+#  path: .tekton
 
 - branch: master
   path: git
