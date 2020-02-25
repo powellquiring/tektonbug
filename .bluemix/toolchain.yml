@@ -20,6 +20,14 @@ services:
       type: clone
       has_issues: false
       enable_traceability: false
+  repolibrary`:
+    service_id: githubpublic
+    parameters:
+      repo_name: 'tekton-catalog'
+      repo_url: https://github.com/open-toolchain/tekton-catalog.git
+      type: link
+      has_issues: false
+      enable_traceability: false
   build:
     service_id: pipeline
     parameters:
@@ -52,59 +60,3 @@ form:
       branch-name: 'master'
     schema:
       $ref: deploy.json
-#
-#------
-#services:
-#  repo:
-#    parameters:
-#      configuration:
-#        content:
-#          $text: tekton.yaml
-#        env:
-#          repo: repo
-#      label: deleteme
-#      name: deleteme
-#      services:
-#      - repo
-#      type: tekton
-#      ui_pipeline: true
-#    service_id: pipeline
-#  repo:
-#    parameters:
-#      api_root_url: https://api.github.com
-#      authorized: github
-#      custom_host: ""
-#      enable_traceability: false
-#      extra_capabilities:
-#      - capability_id: git.issues
-#        dashboard_url: https://github.com/powellquiring/secure-file-storage/issues
-#        display_name: Issues
-#        enabled: false
-#        label: secure-file-storage
-#        readme: false
-#        tags:
-#        - think
-#        - code
-#      git_id: github
-#      has_issues: false
-#      label: secure-file-storage
-#      legal: false
-#      legal_label: ""
-#      namespace_table: ""
-#      owner_id: powellquiring
-#      private_repo: false
-#      repo_name: secure-file-storage
-#      repo_url: https://github.com/powellquiring/secure-file-storage.git
-#      source_repo_url: https://github.com/powellquiring/secure-file-storage
-#      token_url: https://otc-github-consolidated-broker.us-south.devops.cloud.ibm.com/github/token?git_id=github
-#      type: link
-#    service_id: githubpublic
-#template:
-#  description: simple1
-#  name: Secure File Storage
-#  required:
-#  - repo
-#toolchain:
-#  name: simple1
-#version: 2
-#
