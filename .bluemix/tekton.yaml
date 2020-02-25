@@ -11,8 +11,8 @@ triggers: []
 inputs:
 - type: git
   service: ${GIT_REPO}
-  #branch: ${GIT_BRANCH}
-  branch: master
+  branch: ${GIT_BRANCH}
+  #branch: master
   path: .tekton
 
 #- branch: master
@@ -21,14 +21,14 @@ inputs:
 #  service: repolibrary
 properties:
 - name: GIT_REPO
-  value: ${GIT_REPO}
+  value: 'https://github.com/powellquiring/secure-file-storage'
   type: text 
 - name: GIT_BRANCH
   value: ${GIT_BRANCH}
   type: text 
-#- name: API_KEY
-#  value: ${API_KEY}
-#  type: SECURE
+- name: API_KEY
+  value: ${API_KEY}
+  type: SECURE
 #- name: REGISTRY_REGION_ID
 #  value: ${REGISTRY_REGION_ID}
 #  type: text 
