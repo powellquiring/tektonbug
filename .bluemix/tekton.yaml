@@ -6,12 +6,14 @@
 #properties: []
 #triggers: []
 #---
+properties: []
+triggers: []
 inputs:
 - type: git
   service: ${GIT_REPO}
-  branch: master
-#  branch: ${GIT_BRANCH}
+  branch: ${GIT_BRANCH}
   path: .tekton
+
 #- branch: master
 #  path: git
 #  type: git
