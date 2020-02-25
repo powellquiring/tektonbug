@@ -16,7 +16,6 @@ services:
     service_id: githubpublic
     parameters:
       repo_name: 'secure-file-storage'
-      #repo_url: 'https://github.com/IBM-Cloud/secure-file-storage'
       repo_url: 'https://github.com/powellquiring/secure-file-storage'
       type: clone
       has_issues: false
@@ -31,7 +30,6 @@ services:
       type: tekton
       configuration:
         content:
-          # $text: pipeline.yml
           $text: tekton.yaml
         env:
           GIT_REPO: repo
@@ -44,7 +42,7 @@ services:
           TARGET_CLUSTER_NAME: '{{form.pipeline.parameters.target-cluster-name}}'
           TARGET_NAMESPACE: '{{form.pipeline.parameters.target-cluster-namespace}}'
           TARGET_RESOURCE_GROUP: '{{form.pipeline.parameters.target-resource-group}}'
-        execute: true
+        execute: false
 form:
   pipeline:
     parameters:
