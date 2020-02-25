@@ -1,59 +1,7 @@
----
 inputs:
-- type: git
-  service: ${GIT_REPO}
-  branch: ${GIT_BRANCH}
-  path: .tekton
-properties:
-- name: GIT_REPO
-  value: ${GIT_REPO}
-  type: text 
-- name: GIT_BRANCH
-  value: ${GIT_BRANCH}
-  type: text 
-- name: API_KEY
-  value: ${API_KEY}
-  type: SECURE
-- name: REGISTRY_REGION_ID
-  value: ${REGISTRY_REGION_ID}
-  type: text 
-- name: REGISTRY_NAMESPACE
-  value: ${REGISTRY_NAMESPACE}
-  type: text 
-- name: TARGET_CLUSTER_NAME
-  value: ${TARGET_CLUSTER_NAME}
-  type: text 
-- name: IMAGE_NAME
-  value: ${IMAGE_NAME}
-  type: text 
-- name: TARGET_REGION_ID
-  value: ${TARGET_REGION_ID}
-  type: text 
-- name: TARGET_NAMESPACE
-  value: ${TARGET_NAMESPACE}
-  type: text 
-- name: TARGET_RESOURCE_GROUP
-  value: ${TARGET_RESOURCE_GROUP}
-  type: text 
-- name: COS_PLAN
-  value: "lite"
-  type: text 
-- name: APP_ID_PLAN
-  value: "lite"
-  type: text 
-- name: CLOUDANT_PLAN
-  value: "lite"
-  type: text 
-triggers:
-- eventListener: 10-build
-  name: 10-build
-  type: manual
 - branch: master
-  eventListener: 10-build
-  events:
-    pull_request: false
-    pull_request_closed: false
-    push: true
-  name: Git PR Trigger
+  path: .tekton
   type: git
-  url: https://github.com/powellquiring/sfs-tekton.git
+  service: ${repo}
+properties: []
+triggers: []
