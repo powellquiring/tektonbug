@@ -7,18 +7,16 @@
 #triggers: []
 #---
 #properties: []
-triggers: []
+#triggers: []
 inputs:
-#- type: git
-#  service: repo
-#  branch: ${GIT_BRANCH}
-#  path: .tekton
-
+- type: git
+  service: repo
+  branch: ${GIT_BRANCH}
+  path: .tekton
 - branch: master
   path: git
   type: git
   service: repolibrary
-
 properties:
 - name: GIT_REPO
   value: 'https://github.com/powellquiring/secure-file-storage'
@@ -29,9 +27,9 @@ properties:
 - name: API_KEY
   value: ${API_KEY}
   type: SECURE
-#- name: REGISTRY_REGION_ID
-#  value: ${REGISTRY_REGION_ID}
-#  type: text 
+- name: REGISTRY_REGION_ID
+  value: ${REGISTRY_REGION_ID}
+  type: text 
 #- name: REGISTRY_NAMESPACE
 #  value: ${REGISTRY_NAMESPACE}
 #  type: text 
@@ -59,10 +57,10 @@ properties:
 #- name: CLOUDANT_PLAN
 #  value: "lite"
 #  type: text 
-#triggers:
-#- eventListener: BUILD
-#  name: BUILD
-#  type: manual
+triggers:
+- eventListener: BUILD
+  name: BUILD
+  type: manual
 #- branch: master
 #  eventListener: DEPLOY
 #  events:
