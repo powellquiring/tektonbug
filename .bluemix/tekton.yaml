@@ -11,7 +11,8 @@ triggers: []
 inputs:
 - type: git
   service: ${GIT_REPO}
-  branch: ${GIT_BRANCH}
+  #branch: ${GIT_BRANCH}
+  branch: master
   path: .tekton
 
 #- branch: master
