@@ -1,13 +1,3 @@
-#inputs:
-#- branch: master
-#  path: .tekton
-#  type: git
-#  service: ${GIT_REPO}
-#properties: []
-#triggers: []
-#---
-#properties: []
-#triggers: []
 inputs:
 - type: git
   service: repo
@@ -30,58 +20,58 @@ properties:
 - name: REGISTRY_REGION_ID
   value: ${REGISTRY_REGION_ID}
   type: text 
-#- name: REGISTRY_NAMESPACE
-#  value: ${REGISTRY_NAMESPACE}
-#  type: text 
-#- name: TARGET_CLUSTER_NAME
-#  value: ${TARGET_CLUSTER_NAME}
-#  type: text 
-#- name: IMAGE_NAME
-#  value: ${IMAGE_NAME}
-#  type: text 
-#- name: TARGET_REGION_ID
-#  value: ${TARGET_REGION_ID}
-#  type: text 
-#- name: TARGET_NAMESPACE
-#  value: ${TARGET_NAMESPACE}
-#  type: text 
-#- name: TARGET_RESOURCE_GROUP
-#  value: ${TARGET_RESOURCE_GROUP}
-#  type: text 
-#- name: COS_PLAN
-#  value: "lite"
-#  type: text 
-#- name: APP_ID_PLAN
-#  value: "lite"
-#  type: text 
-#- name: CLOUDANT_PLAN
-#  value: "lite"
-#  type: text 
+- name: REGISTRY_NAMESPACE
+  value: ${REGISTRY_NAMESPACE}
+  type: text 
+- name: TARGET_CLUSTER_NAME
+  value: ${TARGET_CLUSTER_NAME}
+  type: text 
+- name: IMAGE_NAME
+  value: ${IMAGE_NAME}
+  type: text 
+- name: TARGET_REGION_ID
+  value: ${TARGET_REGION_ID}
+  type: text 
+- name: TARGET_NAMESPACE
+  value: ${TARGET_NAMESPACE}
+  type: text 
+- name: TARGET_RESOURCE_GROUP
+  value: ${TARGET_RESOURCE_GROUP}
+  type: text 
+- name: COS_PLAN
+  value: "lite"
+  type: text 
+- name: APP_ID_PLAN
+  value: "lite"
+  type: text 
+- name: CLOUDANT_PLAN
+  value: "lite"
+  type: text 
 triggers:
+- branch: master
+  eventListener: DEPLOY
+  events:
+    pull_request: false
+    pull_request_closed: false
+    push: true
+  name: git DEPLOY
+  type: git
+  url: https://github.com/powellquiring/secure-file-storage.git
 - eventListener: BUILD
   name: BUILD
   type: manual
-#- branch: master
-#  eventListener: DEPLOY
-#  events:
-#    pull_request: false
-#    pull_request_closed: false
-#    push: true
-#  name: git DEPLOY
-#  type: git
-#  url: https://github.com/powellquiring/secure-file-storage.git
-#- eventListener: DEPLOY
-#  name: DEPLOY
-#  type: manual
-#- eventListener: ROTATE_STORAGE_CREDENTIALS
-#  name: ROTATE_STORAGE_CREDENTIALS
-#  type: manual
-#- eventListener: ROTATE_APPID_CREDENTIALS
-#  name: ROTATE_APPID_CREDENTIALS
-#  type: manual
-#- eventListener: ROTATE_REGISTGRY_CREDENTIALS
-#  name: ROTATE_REGISTRY_CREDENTIALS
-#  type: manual
-#- eventListener: UNINSTALL
-#  name: UNINSTALL
-#  type: manual
+- eventListener: DEPLOY
+  name: DEPLOY
+  type: manual
+- eventListener: ROTATE_STORAGE_CREDENTIALS
+  name: ROTATE_STORAGE_CREDENTIALS
+  type: manual
+- eventListener: ROTATE_APPID_CREDENTIALS
+  name: ROTATE_APPID_CREDENTIALS
+  type: manual
+- eventListener: ROTATE_REGISTGRY_CREDENTIALS
+  name: ROTATE_REGISTRY_CREDENTIALS
+  type: manual
+- eventListener: UNINSTALL
+  name: UNINSTALL
+  type: manual
