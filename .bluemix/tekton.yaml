@@ -73,15 +73,15 @@ triggers:
 - eventListener: DEPLOY
   name: DEPLOY
   type: manual
-#- eventListener: ROTATE_STORAGE_CREDENTIALS
-#  name: ROTATE_STORAGE_CREDENTIALS
-#  type: manual
-#- eventListener: ROTATE_APPID_CREDENTIALS
-#  name: ROTATE_APPID_CREDENTIALS
-#  type: manual
-#- eventListener: ROTATE_REGISTGRY_CREDENTIALS
-#  name: ROTATE_REGISTRY_CREDENTIALS
-#  type: manual
-#- eventListener: UNINSTALL
-#  name: UNINSTALL
-#  type: manual
+- eventListener: ROTATE_STORAGE_CREDENTIALS
+  name: ROTATE_STORAGE_CREDENTIALS
+  type: manual
+- eventListener: ROTATE_APPID_CREDENTIALS
+  name: ROTATE_APPID_CREDENTIALS
+  type: manual
+- eventListener: ROTATE_REGISTGRY_CREDENTIALS
+  name: ROTATE_REGISTRY_CREDENTIALS
+  type: manual
+- eventListener: UNINSTALL
+  name: UNINSTALL
+  type: manual
