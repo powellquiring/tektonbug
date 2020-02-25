@@ -1,16 +1,16 @@
-inputs:
-- branch: master
-  path: .tekton
-  type: git
-  service: ${GIT_REPO}
-properties: []
-triggers: []
-#---
 #inputs:
-#- type: git
-#  service: ${GIT_REPO}
-#  branch: ${GIT_BRANCH}
+#- branch: master
 #  path: .tekton
+#  type: git
+#  service: ${GIT_REPO}
+#properties: []
+#triggers: []
+#---
+inputs:
+- type: git
+  service: ${GIT_REPO}
+  branch: ${GIT_BRANCH}
+  path: .tekton
 #- branch: master
 #  path: git
 #  type: git
