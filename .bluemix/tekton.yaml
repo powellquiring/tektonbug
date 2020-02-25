@@ -61,15 +61,6 @@ triggers:
 - eventListener: BUILD
   name: BUILD
   type: manual
-#- branch: master
-#  eventListener: DEPLOY
-#  events:
-#    pull_request: false
-#    pull_request_closed: false
-#    push: true
-#  name: git DEPLOY
-#  type: git
-#  url: https://github.com/powellquiring/secure-file-storage.git
 - eventListener: DEPLOY
   name: DEPLOY
   type: manual
@@ -79,9 +70,16 @@ triggers:
 - eventListener: ROTATE_APPID_CREDENTIALS
   name: ROTATE_APPID_CREDENTIALS
   type: manual
-- eventListener: ROTATE_REGISTGRY_CREDENTIALS
+- eventListener: ROTATE_REGISTRY_CREDENTIALS
   name: ROTATE_REGISTRY_CREDENTIALS
   type: manual
 - eventListener: UNINSTALL
   name: UNINSTALL
   type: manual
+- branch: master
+  eventListener: BUILD
+  events:
+    push: true
+  name: git-BUILD
+  type: git
+  url: https://github.com/powellquiring/secure-file-storage.git
