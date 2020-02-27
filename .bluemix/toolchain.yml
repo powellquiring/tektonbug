@@ -38,7 +38,7 @@ services:
       type: $env.type
       configuration:
         content:
-          $text:>
+          $text: >
             $env.type + '.yml'
         env:
           GIT_REPO: repo

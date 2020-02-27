@@ -8,9 +8,9 @@ inputs:
   type: git
   service: repolibrary
 properties:
-- name: GIT_REPO
-  value: ${GIT_REPO_URL} 
-  type: text 
+#- name: GIT_REPO
+#  value: ${GIT_REPO_URL} 
+#  type: text 
 - name: GIT_BRANCH
   value: ${GIT_BRANCH}
   type: text 
@@ -47,25 +47,26 @@ properties:
 - name: CLOUDANT_PLAN
   value: "lite"
   type: text 
-triggers:
-- eventListener: BUILD
-  name: BUILD
-  type: manual
-- eventListener: DEPLOY
-  name: DEPLOY
-  type: manual
-- eventListener: ROTATE_STORAGE_CREDENTIALS
-  name: ROTATE_STORAGE_CREDENTIALS
-  type: manual
-- eventListener: ROTATE_APPID_CREDENTIALS
-  name: ROTATE_APPID_CREDENTIALS
-  type: manual
-- eventListener: ROTATE_REGISTRY_CREDENTIALS
-  name: ROTATE_REGISTRY_CREDENTIALS
-  type: manual
-- eventListener: UNINSTALL
-  name: UNINSTALL
-  type: manual
+#triggers:
+#- eventListener: BUILD
+#  name: BUILD
+#  type: manual
+#- eventListener: DEPLOY
+#  name: DEPLOY
+#  type: manual
+#- eventListener: ROTATE_STORAGE_CREDENTIALS
+#  name: ROTATE_STORAGE_CREDENTIALS
+#  type: manual
+#- eventListener: ROTATE_APPID_CREDENTIALS
+#  name: ROTATE_APPID_CREDENTIALS
+#  type: manual
+#- eventListener: ROTATE_REGISTRY_CREDENTIALS
+#  name: ROTATE_REGISTRY_CREDENTIALS
+#  type: manual
+#- eventListener: UNINSTALL
+#  name: UNINSTALL
+#  type: manual
+#
 # git triggers break the pipeline making it uneditable
 #- branch: master
 #  eventListener: BUILD
