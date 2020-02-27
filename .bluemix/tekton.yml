@@ -5,7 +5,7 @@ inputs:
   - type: git
     branch: master
     path: git
-    url: 'https://github.com/open-toolchain/tekton-catalog.git'
+    service: repolibrary
 #inputs:
 #- type: git
 #  service: repo
