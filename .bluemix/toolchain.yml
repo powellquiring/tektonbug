@@ -9,6 +9,7 @@ template:
   required:
     - build
     - repo
+    - repolibrary
 toolchain:
   name: 'secure-file-storage-{{timestamp}}'
 services:
@@ -33,6 +34,7 @@ services:
     parameters:
       services:
         - repo
+        - repolibrary
       name: 'secure-file-storage ({{form.pipeline.parameters.branch-name}})'
       ui-pipeline: true
       type: $env.type
