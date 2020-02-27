@@ -9,7 +9,7 @@ inputs:
   service: repolibrary
 properties:
 - name: GIT_REPO
-  value: 'https://github.com/powellquiring/secure-file-storage'
+  value: ${GIT_REPO_URL} 
   type: text 
 - name: GIT_BRANCH
   value: ${GIT_BRANCH}

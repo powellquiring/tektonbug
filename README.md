@@ -25,11 +25,13 @@ This project comes with a partially automated toolchain capable of deploying the
 
 1. Optionally create a specific resource group for this project
 
-### And then
+### And then classic
 
-TODO IBM-Cloud
+[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&type=classic)
 
-[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage)
+### Or else tekton
+
+[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&type=tekton)
 
 Once the toolchain has completed, the application will be available at `https://secure-file-storage.<your-cluster-ingress-domain>`.
 
