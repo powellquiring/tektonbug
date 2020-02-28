@@ -3,5 +3,5 @@ triggers: []
 inputs:
   - type: git
     branch: master
-    path: git
-    service: repolibrary
+    path: .tekton
+    service: repo
