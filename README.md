@@ -1,3 +1,7 @@
+### TODO todo remove this
+
+[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&env_id=ibm:yp:us-south&type=tekton)
+
 # Apply end to end security to a cloud application
 
 The repository features a sample application that enables groups of users to upload files to a common storage pool and to provide access to those files via shareable links. The application is written in Node.js and deployed as Docker container to the IBM Cloud Kubernetes service. It leverages several security-related services and features to improve app security. It includes data encrypted with your own keys, user authentication, and security auditing.
@@ -27,11 +31,11 @@ This project comes with a partially automated toolchain capable of deploying the
 
 ### And then classic
 
-[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&type=classic)
+[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&env_id=ibm:yp:us-south&type=classic)
 
 ### Or else tekton
 
-[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&type=tekton)
+[![Create toolchain](https://cloud.ibm.com/devops/graphics/create_toolchain_button.png)](https://cloud.ibm.com/devops/setup/deploy/?repository=https%3A//github.com/powellquiring/secure-file-storage&env_id=ibm:yp:us-south&type=tekton)
 
 Once the toolchain has completed, the application will be available at `https://secure-file-storage.<your-cluster-ingress-domain>`.
 
