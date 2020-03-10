@@ -2,13 +2,13 @@ properties: []
 triggers: []
 inputs:
 - type: git
-  branch: ${GIT_BRANCH}
-  path: .tekton
-  service: repo
-- type: git
   branch: master
   path: git
   service: repolibrary
+#- type: git
+#  branch: ${GIT_BRANCH}
+#  path: .tekton
+#  service: repo
 properties: []
 triggers: []
 #
